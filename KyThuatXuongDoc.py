@@ -10,14 +10,15 @@ import random
 import numpy as np
 import matplotlib.pyplot as plt
 
-
+#F(x)
 def F(x):
     return x*x+5*np.sin(x)
 
 #đây là đạo hàm của  F(x) theo x
 def f(x):
     return 2*x+5*np.cos(x)
-    
+
+#xuong doc
 def mini(x, alpha):
     for i in range(10000):
         x=x-alpha*f(x)
@@ -30,11 +31,11 @@ x= random.randint(-1000, 1000)
 minx=mini(x, alpha)
 minf=F(minx)
 print('Gia tri cua x ban dau: '+str(x))
-print('Cuc tieu dia phuong: '+str(minx))
+print('Ham so dat cuc tieu tai: '+str(minx))
 print('Gia tri cuc tieu dia phuong: '+str(minf))
 
 Ox= [_ for _ in range(int(minx)-10, int(minx)+10)]
-Oy= [F(x) for x in Ox]
+Oy= [F(_) for _ in Ox]
 
 print(Ox)
 print(Oy)
